@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conspiracy?</title>
+    <meta name="description" content="Get the latest news articles on current and historical conspiracies.">
+
+    <link href="assets/css/main.css" rel="preload" as="style">
+    <link href="assets/css/main.css" rel="stylesheet">
+	
+	<meta property="og:title" content="Conspiracy?">
+    <meta property="og:description" content="Get the latest news articles on current and historical conspiracies.">
+	<meta property="og:image" content="android-chrome-512x512.png">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#373737">
+	<meta name="msapplication-TileColor" content="#373737">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#616161">
+</head>
+<body id="index">
+    <header>
+        <nav>
+            <a title="navigation" id="navbar-toggler" href="javascript:void(0);" onclick="appdrawer()">
+				<i class="nav-icon"></i>
+            </a>
+            <div class="app-drawer closed">
+                <a href="index.html">
+                    <i class="material-icons" id="active">home</i>
+                    <p>Home</p>
+                </a>
+                <a href="news.html">
+                    <i class="material-icons">library_books</i>
+                    <p>News</p>
+                </a>
+                <a href="contact.html">
+                    <i class="material-icons">chat</i>
+                    <p>Contact</p>
+                </a>
+            </div><!--App Drawer-->
+            <a title="close-navigation" id="close" href="javascript:void(0);" onclick="appclose()"></a>
+			<a id="title">Conspiracy?</a>
+        </nav>
+    </header>
+    <main>
+        <img class="logo" width="300px" height="261px" src="assets/images/logo.svg" alt="logo">
+        <h1>Welcome to Conspiracy?</h1>
+        <p>
+            The new place to find your conspiracy news. Browse thousands of articles ranging from the assassination of President John F. Kennedy to Project MKUltra.
+        </p>
+        <p class="button button-one"><a href="news.html" >View the News</a></p>
+    </main>
+    <footer>
+        <p>&copy; <span id="year">2018</span> | Website by <a href="https://joebailey.xyz">Joe Bailey</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="Documentation/.vuepress/dist">Documentation</a></p>
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function displayNextImage() {
+            x = (x === 1) ? 0 : x + 1;
+            document.getElementsByClassName("logo")[0].src = images[x];
+        };
+
+        setInterval(displayNextImage, 5000);
+
+        var images = [], x = -1;
+        images[0] = "assets/images/logo.svg";
+        images[1] = "assets/images/logo2.svg";
+        
+    </script>
+</body>
+</html>

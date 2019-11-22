@@ -1,0 +1,26 @@
+#index {
+    main {
+        max-width: 438px;
+    }
+    h1 {
+        text-align: center;
+        margin: 25px 0;
+        width: 100%;
+    }
+    p {
+        margin-bottom: 25px;
+        text-align: justify;
+    }
+    .button-one {
+        text-align: center;
+        width: 100%;
+    }
+    @media (max-width: 980px) {
+        main {
+            max-width: calc(100% - 36px);
+        }
+        p {
+            margin-bottom: 50px;
+        }
+    }
+}

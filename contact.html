@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Contact - Conspiracy?</title>
+		<meta name="description" content="Contact your number one source of great conspiracy theories.">
+	
+		<link href="assets/css/main.css" rel="preload" as="style">
+		<link href="assets/css/main.css" rel="stylesheet">
+		
+		<meta property="og:title" content="Contact - Conspiracy?"></meta>
+		<meta property="og:description" content="Contact your number one source of great conspiracy theories.">
+		<meta property="og:image" content="android-chrome-512x512.png">
+		
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#373737">
+		<meta name="msapplication-TileColor" content="#373737">
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+		<meta name="theme-color" content="#616161">
+	</head>
+<body id="contact">
+    <header>
+        <nav>
+            <a title="navigation" id="navbar-toggler" href="javascript:void(0);" onclick="appdrawer()">
+				<i class="nav-icon"></i>
+            </a>
+            <div class="app-drawer closed">
+					<a href="index.html">
+						<i class="material-icons">home</i>
+						<p>Home</p>
+					</a>
+					<a href="news.html">
+						<i class="material-icons">library_books</i>
+						<p>News</p>
+					</a>
+					<a href="contact.html" >
+						<i class="material-icons" id="active">chat</i>
+						<p>Contact</p>
+					</a>
+				</div><!--App Drawer-->
+				<a title="close-navigation" id="close" href="javascript:void(0);" onclick="appclose()"></a>
+			<a id="title">Contact - Conspiracy?</a>
+        </nav>
+    </header>
+    <main>
+		<form method="post" name="myemailform" action="/form.php">
+
+			<label for="fname">First Name</label>
+			<input id="fname" name="fname" required>
+
+			<label for="lname">Last Name</label>
+			<input id="lname" name="lname" required>
+
+			<label for="email">Email</label>
+			<input id="email" name="email" type="email" required>
+
+			<label for="subject">Subject</label>
+			<input id="subject" name="subject" required>
+
+			<label for="message">Message</label>
+			<textarea id="message" name="message" rows="4" required max-length="120"></textarea>
+			<div id="counter">0/120</div><!--Counter-->
+
+			<label for="privacyPolicy">
+				<input type="checkbox" id="privacyPolicy" name="privacy" value="privacy" required> I consent to having this website store my submitted information so they can respond to my inquiry.
+			</label>
+
+			<button class="button-two">
+				Submit
+			</button>
+		</form>
+    </main>
+    <footer>
+        <p>&copy; <span id="year">2018</span> | Website by <a href="https://joebailey.xyz">Joe Bailey</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="Documentation/.vuepress/dist">Documentation</a></p>
+    </footer>
+	<script async src="assets/js/main.js"></script>
+	<script>
+		var textarea = document.querySelector("textarea");
+		textarea.addEventListener("input", function(){
+			var maxlength = this.getAttribute("max-length");
+			var currentLength = this.value.length;
+			if( currentLength >= maxlength ){
+				window.alert("You have reached the maximum number of characters.");
+			}
+			document.getElementById('counter').innerHTML = currentLength + "/120";
+		});
+	</script>
+</body>
+</html>
